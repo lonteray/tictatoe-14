@@ -41,7 +41,7 @@ def check_for_draw():
                 break
     if is_draw:
         is_game_over = True
-        messagebox.showinfo('Гру скінчено віууу', 'Нічия лалала')
+        messagebox.showinfo('Гру скінчено віуууe', 'Нічия лалала')
 
 def check_points():
     check_points_for_win(
