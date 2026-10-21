@@ -78,8 +78,7 @@ def check_points_for_win(p1, p2, p3):
 points = [
     [0, 0, 0],
     [0, 0, 0],
-    [0, 0, 0]
-    ]
+    [0, 0, 0]]
 buttons = []
 for row_index in range(3):
     row = []
