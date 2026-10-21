@@ -4,7 +4,7 @@ from tkinter import messagebox
 root = Tk()
 root.geometry('400x500')
 root.title('Хрестики-нулики')
-root.configure(bg='grey')
+root.configure(bg='#fac166')
 is_crosses_turn = True # перший хід хрестиків
 is_game_over = False
 #messagebox.showinfo('Діалогове вікно', 'Привіт!')
