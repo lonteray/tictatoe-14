@@ -68,12 +68,12 @@ def check_points_for_win(p1, p2, p3):
     sum = p1 + p2 + p3
     if sum == 3:
         is_game_over = True
-        messagebox.showinfo('Перемога!',
-                            'Хрестики перемогли!')
+        messagebox.showinfo('Результат!',
+                            'Вітаю! Перемога хрестиків !')
     if sum == -3:
         is_game_over = True
-        messagebox.showinfo('Перемога!',
-                            'Нулики перемогли!')
+        messagebox.showinfo('Результат!',
+                            'Вітаю! Перемога нуликів !')
 
 points = [
     [0, 0, 0],
