@@ -3,8 +3,8 @@ from tkinter import messagebox
 
 root = Tk()
 root.geometry('400x500')
-root.title('Хрестики-нулики')
-root.configure(bg='grey')
+root.title('Хрестики-нулики нова версія')
+root.configure(bg='green')
 is_crosses_turn = True # перший хід хрестиків
 is_game_over = False
 #messagebox.showinfo('Діалогове вікно', 'Привіт!')
@@ -41,7 +41,7 @@ def check_for_draw():
                 break
     if is_draw:
         is_game_over = True
-        messagebox.showinfo('Гру скінчено', 'Нічия')
+        messagebox.showinfo('Гру скінчено віуууe', 'Нічия лалала')
 
 def check_points():
     check_points_for_win(
@@ -69,11 +69,11 @@ def check_points_for_win(p1, p2, p3):
     if sum == 3:
         is_game_over = True
         messagebox.showinfo('Перемога!',
-                            'Хрестики перемогли!')
+                            'Хрестики перемогли пампампам!')
     if sum == -3:
         is_game_over = True
         messagebox.showinfo('Перемога!',
-                            'Нулики перемогли!')
+                            'Нулики перемогли бамбабам!')
 
 points = [
     [0, 0, 0],
