@@ -15,12 +15,12 @@ def on_button_click(event):
     if button['state'] == 'disabled' or is_game_over:
         return
     if is_crosses_turn:
-        button.configure(text='x')
+        button.configure(text='x', fg='pink', font=('Arial', 26, 'bold'))
         row_index = button.row_index
         column_index = button.column_index
         points[row_index][column_index] = 1
     else:
-        button.configure(text='o')
+        button.configure(text='o', fg='red', font=('Arial', 26, 'bold'))
         row_index = button.row_index
         column_index = button.column_index
         points[row_index][column_index] = -1
@@ -84,7 +84,7 @@ buttons = []
 for row_index in range(3):
     row = []
     for column_index in range(3):
-        button = Button(width=10, height=4)
+        button = Button(width=10, height=5)
         button.grid(row=row_index, column=column_index, padx=20, pady=20)
         button.bind('<Button-1>', on_button_click)
         button.row_index = row_index
