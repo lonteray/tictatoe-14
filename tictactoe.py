@@ -84,7 +84,7 @@ buttons = []
 for row_index in range(3):
     row = []
     for column_index in range(3):
-        button = Button(width=10, height=4)
+        button = Button(width=10, height=4, bg="blue")
         button.grid(row=row_index, column=column_index, padx=20, pady=20)
         button.bind('<Button-1>', on_button_click)
         button.row_index = row_index
