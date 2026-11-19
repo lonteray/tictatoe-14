@@ -132,5 +132,6 @@ for row_index in range(3):
         button.column_index = column_index
         row.append(button)
     buttons.append(row)
-    
+
+
 root.mainloop()
