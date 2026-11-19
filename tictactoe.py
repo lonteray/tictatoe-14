@@ -5,8 +5,9 @@ root = Tk()
 root.geometry('400x500')
 root.title('Хрестики-нулики')
 root.configure(bg='#fac166')
-is_crosses_turn = True
+is_crosses_turn = True # перший хід хрестиків
 is_game_over = False
+#messagebox.showinfo('Діалогове вікно', 'Привіт!')
 x_wins = 0
 o_wins = 0
 draws = 0
@@ -131,6 +132,5 @@ for row_index in range(3):
         button.column_index = column_index
         row.append(button)
     buttons.append(row)
-
-
+    
 root.mainloop()
