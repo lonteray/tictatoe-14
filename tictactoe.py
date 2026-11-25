@@ -7,6 +7,9 @@ root.title('Хрестики-нулики')
 root.configure(bg='#fac166')
 is_crosses_turn = True # перший хід хрестиків
 is_game_over = False
+
+def update_turn_label():
+    turn_label.config("{'X' if is_crosses_turn else 'O'}")
 #messagebox.showinfo('Діалогове вікно', 'Привіт!')
 
 def on_button_click(event):
@@ -24,7 +27,11 @@ def on_button_click(event):
         row_index = button.row_index
         column_index = button.column_index
         points[row_index][column_index] = -1
+   
     is_crosses_turn = not is_crosses_turn
+
+    update_turn_label()
+  
     button['state'] = 'disabled'
     check_points()
     check_for_draw()
@@ -91,6 +98,9 @@ for row_index in range(3):
         button.column_index = column_index
         row.append(button)
     buttons.append(row)
-    
+turn_label = Label(root, text='Зараз ходить: X', font=('Arial', 14), bg='#fac166')
+turn_label.grid(row=3, columnspan=3, pady=10)
+
+update_turn_label()
 
 root.mainloop()
