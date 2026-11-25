@@ -92,7 +92,7 @@ for row_index in range(3):
         button.column_index = column_index
         row.append(button)
     buttons.append(row)
-    turn_label = Label(root, text='Зараз ходить: X', font=('Arial', 14), bg='#fac166')
+turn_label = Label(root, text='Зараз ходить: X', font=('Arial', 14), bg='#fac166')
 turn_label.grid(row=3, columnspan=3, pady=10)
 
 
