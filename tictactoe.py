@@ -18,6 +18,11 @@ score_label = Label(
 )
 score_label.grid(row=5, column=0, columnspan=3)
 
+def update_score_label():
+    score_label.config(
+        text=f"X: {x_wins} | O: {o_wins} | Нічиї: {draws}"
+    )
+
 def on_button_click(event):
     global is_crosses_turn
     button = event.widget
@@ -51,9 +56,7 @@ def check_for_draw():
     if is_draw:
         draws += 1
         is_game_over = True
-        score_label.config(
-            text=f"X: {x_wins} | O: {o_wins} | Нічиї: {draws}"
-        )
+        update_score_label()
         messagebox.showinfo('Гру скінчено', 'Нічия')
 
 def check_points():
@@ -94,9 +97,7 @@ def check_points_for_win(p1, p2, p3):
     if sum == 3:
         x_wins += 1
         is_game_over = True
-        score_label.config(
-            text=f"X: {x_wins} | O: {o_wins} | Нічиї: {draws}"
-        )
+        update_score_label()
         messagebox.showinfo(
             'Перемога!',
             'Хрестики перемогли!'
@@ -104,9 +105,7 @@ def check_points_for_win(p1, p2, p3):
     if sum == -3:
         o_wins += 1
         is_game_over = True
-        score_label.config(
-            text=f"X: {x_wins} | O: {o_wins} | Нічиї: {draws}"
-        )
+        update_score_label()
         messagebox.showinfo(
             'Перемога!',
             'Нулики перемогли!'
@@ -121,6 +120,7 @@ for row_index in range(3):
     row = []
     for column_index in range(3):
         button = Button(width=10, height=4, bg="blue")
+        button.grid(row=row_index, column=column_index, padx=20, pady=20)
         button.bind('<Button-1>', on_button_click)
         button.row_index = row_index
         button.column_index = column_index
