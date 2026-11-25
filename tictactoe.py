@@ -91,6 +91,27 @@ for row_index in range(3):
         button.column_index = column_index
         row.append(button)
     buttons.append(row)
+
+def reset_game():
+    global points, is_crosses_turn, is_game_over
+
+    is_crosses_turn = True
+    is_game_over = False
+
+    points = [
+        [0, 0, 0],
+        [0, 0, 0],
+        [0, 0, 0]
+    ]
+
+    for row in buttons:
+        for button in row:
+            button['text'] = ''
+            button['state'] = NORMAL
+
+button_new_game = Button(root, text='Нова гра', command=reset_game)
+button_new_game.grid(row=3, column=1, pady=10)
+
     
 
 root.mainloop()
