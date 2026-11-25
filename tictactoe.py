@@ -9,7 +9,7 @@ is_crosses_turn = True # перший хід хрестиків
 is_game_over = False
 
 def update_turn_label():
-    turn_label.config(text=f"Зараз ходить: {'X' if is_crosses_turn else 'O'}")
+    turn_label.config("{'X' if is_crosses_turn else 'O'}")
 #messagebox.showinfo('Діалогове вікно', 'Привіт!')
 
 def on_button_click(event):
