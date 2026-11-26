@@ -62,37 +62,25 @@ def check_for_draw():
 def check_points():
     check_points_for_win(
         points[0][0], points[0][1], points[0][2]) #1р
-    if is_game_over:
-        return
     check_points_for_win(
         points[1][0], points[1][1], points[1][2]) #2р
-    if is_game_over:
-        return
     check_points_for_win(
         points[2][0], points[2][1], points[2][2]) #3р
-    if is_game_over:
-        return
     check_points_for_win(
         points[0][0], points[1][0], points[2][0])
-    if is_game_over:
-        return
     check_points_for_win(
         points[0][1], points[1][1], points[2][1])
-    if is_game_over:
-        return
     check_points_for_win(
         points[0][2], points[1][2], points[2][2])
-    if is_game_over:
-        return
     check_points_for_win(
         points[0][0], points[1][1], points[2][2])
-    if is_game_over:
-        return
     check_points_for_win(
         points[0][2], points[1][1], points[2][0])
     
 def check_points_for_win(p1, p2, p3):
     global is_game_over, x_wins, o_wins
+    if is_game_over:
+        return
     sum = p1 + p2 + p3
     if sum == 3:
         x_wins += 1
