@@ -9,6 +9,27 @@ is_crosses_turn = True # перший хід хрестиків
 is_game_over = False
 #messagebox.showinfo('Діалогове вікно', 'Привіт!')
 
+#window
+window_width = 400
+window_height = 500
+screen_width = root.winfo_screenwidth()
+screen_height = root.winfo_screenheight()
+x = (screen_width - window_width) // 2
+y = (screen_height - window_height) // 2
+root.geometry(f'{window_width}x{window_height}+{x}+{y}') 
+
+root.resizable(False, False)
+def on_closing():
+    answer = messagebox.askyesno(
+        'вихід',
+        'ви справді хочете вийти?'
+    )
+    if answer:
+        root.destroy()
+
+root.protocol('WM_DELETE_WINDOW', on_closing)
+
+
 def on_button_click(event):
     global is_crosses_turn
     button = event.widget
