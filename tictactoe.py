@@ -61,11 +61,11 @@ def check_for_draw():
 
 def check_points():
     check_points_for_win(
-        points[0][0], points[0][1], points[0][2]) #1р
+        points[0][0], points[0][1], points[0][2])
     check_points_for_win(
-        points[1][0], points[1][1], points[1][2]) #2р
+        points[1][0], points[1][1], points[1][2])
     check_points_for_win(
-        points[2][0], points[2][1], points[2][2]) #3р
+        points[2][0], points[2][1], points[2][2]) 
     check_points_for_win(
         points[0][0], points[1][0], points[2][0])
     check_points_for_win(
